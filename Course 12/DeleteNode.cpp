@@ -67,6 +67,34 @@ void DeleteFirstNode(Node<int>*& Head)
 	delete FirstNode;
 }
 
+void DeleteLastNode(Node<int>*& Head)
+{
+	if (Head == NULL)
+		return;
+
+	Node<int>* PreviousNode, * CurrentNode;
+	PreviousNode = CurrentNode = Head;
+
+	if (CurrentNode->Next == NULL)
+	{
+		Head = NULL;
+		delete CurrentNode;
+		return;
+	}
+
+	while (CurrentNode != NULL && CurrentNode->Next != NULL)
+	{
+		PreviousNode = CurrentNode;
+		CurrentNode = CurrentNode->Next;
+	}
+
+	if (CurrentNode == NULL)
+		return;
+
+	PreviousNode->Next = NULL;
+	delete CurrentNode;
+}
+
 void PrintList(Node<int>* Head)
 {
 	while (Head != NULL)
@@ -74,6 +102,7 @@ void PrintList(Node<int>* Head)
 		cout << Head->Data << "  ";
 		Head = Head->Next;
 	}
+	cout << "\n";
 }
 
 int main()
@@ -88,7 +117,8 @@ int main()
 	PrintList(Head);
 	
 	DeleteFirstNode(Head);
-	cout << "\n\n";
+	DeleteLastNode(Head);
+
 	PrintList(Head);
 
 	system("pause > 0");
