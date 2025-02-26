@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="DeleteNode.cpp" />
     <ClCompile Include="InsertAfter.cpp" />
     <ClCompile Include="InsertAtBeginning.cpp" />
     <ClCompile Include="InsertAtEnd.cpp" />

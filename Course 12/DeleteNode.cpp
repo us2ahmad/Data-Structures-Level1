@@ -2,14 +2,6 @@
 //
 //using namespace std;
 //
-//void InsertAtBeginning(Node<int>*& Head, int Value)
-//{
-//	Node<int>* NewNode = new Node<int>();
-//	NewNode->Data = Value;
-//	NewNode->Next = Head;
-//	Head = NewNode;
-//}
-//
 //void InsertAtEnd(Node<int>*& Head, int Value)
 //{
 //    // We pass Head by reference so that we can modify it in case the list is empty.
@@ -35,6 +27,34 @@
 //    }
 //}
 //
+//void DeleteNode(Node<int> *&Head, int Value)
+//{
+//	if (Head == NULL)
+//		return;
+//
+//	Node<int> *PreviousNode, *CurrentNode;
+//	PreviousNode = CurrentNode = Head;
+//	
+//	if (CurrentNode->Data == Value)
+//	{
+//		Head = CurrentNode->Next;
+//		delete CurrentNode;
+//		return;
+//	}
+//	
+//	while (CurrentNode != NULL && CurrentNode->Data != Value)
+//	{
+//		PreviousNode = CurrentNode;
+//		CurrentNode = CurrentNode->Next;
+//	}
+//
+//	if (CurrentNode == NULL)
+//		return;
+//	
+//	PreviousNode->Next = CurrentNode->Next;
+//	delete CurrentNode;
+//}
+//
 //void PrintList(Node<int>* Head)
 //{
 //	while (Head != NULL)
@@ -47,13 +67,18 @@
 //int main()
 //{
 //	Node<int>* Head = NULL;
-//
 //	InsertAtEnd(Head,1);
 //	InsertAtEnd(Head,2);
 //	InsertAtEnd(Head,3);
-//	InsertAtBeginning(Head,0);
+//	InsertAtEnd(Head,4);
+//	InsertAtEnd(Head,5);
+//	InsertAtEnd(Head,6);
 //	PrintList(Head);
 //	
+//	DeleteNode(Head,4);
+//	cout << "\n\n";
+//	PrintList(Head);
+//
 //	system("pause > 0");
 //
 //	return 0;
