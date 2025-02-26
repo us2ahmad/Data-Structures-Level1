@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="InsertAfter.cpp" />
     <ClCompile Include="InsertAtBeginning.cpp" />
     <ClCompile Include="Node.cpp" />
     <ClCompile Include="STL_Queue.cpp" />
