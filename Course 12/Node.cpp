@@ -1,7 +1,16 @@
-//#include "Node.h"
+//#pragma once
+//#include <iostream>
 //
 //using namespace std;
 //
+//template <class T>
+//class Node
+//{
+//public:
+//	T Data;
+//	Node* Next;
+//
+//};
 //int main() 
 //{
 //	Node<int>* Head  = NULL;
