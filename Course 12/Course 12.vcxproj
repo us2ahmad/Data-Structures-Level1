@@ -128,10 +128,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="DoublyLinkedList.cpp" />
+    <ClCompile Include="Map.cpp" />
     <ClCompile Include="Node.cpp" />
     <ClCompile Include="SinglyLinkedList.cpp" />
     <ClCompile Include="STL_Queue.cpp" />
     <ClCompile Include="STL_Stack.cpp" />
+    <ClCompile Include="union.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
